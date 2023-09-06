@@ -6,7 +6,7 @@ const torrentStream = require("torrent-stream");
 const bodyParser = require("body-parser");
 const pLimit = require('p-limit');
 const http = require("http");
-const limit = pLimit(10);
+const limit = pLimit(5);
 
 function getSize(size) {
   const gb = 1024 * 1024 * 1024;
@@ -223,7 +223,7 @@ const host2 = {
 
 const fetchTorrentFromHost1 = async (query) => {
   const { hostUrl, apiKey } = host1;
-  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=2030&Category%5B%5D=2040&Category%5B%5D=2045&Category%5B%5D=2070&Category%5B%5D=5000&Category%5B%5D=5030&Category%5B%5D=5040&Category%5B%5D=8000&Category%5B%5D=8010&Tracker%5B%5D=divxtotal`;
+  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=2030&Category%5B%5D=2040&Category%5B%5D=2045&Category%5B%5D=2070&Category%5B%5D=5000&Category%5B%5D=5030&Tracker%5B%5D=cinecalidad&Tracker%5B%5D=divxtotal`;
 
   try {
     const response = await fetch(url, {
@@ -232,7 +232,7 @@ const fetchTorrentFromHost1 = async (query) => {
         "accept-language": "en-US,en;q=0.9",
         "x-requested-with": "XMLHttpRequest",
         cookie:
-          "Jackett=CfDJ8JGMKzAOIg1GpbGxjar2TujvQ1tVmIta0XThcBG4V_j32mQnx6z3GDTiqYsDLv0jLvfan6JOfx_Mr61hId8KLu389GzmDM6RDqq6yN7K3-ucA7FSricYvgWGmNnVq5xL7cdQfNVIvv78fhRG0Z7lw_Yjz47ZPY9ChVi2ppvE9NFr8dMUg_-fto8XEFEy29ZI6bsxX4KWYoEP-S_zUhhymLf54VJSQKCAvo7d0ZLzWh9p_08kEGaGxyTA8tZYhbolyjKEBoGno80BawzJq2jog8ThKhmtN45rAQdb1CrOkT9dl0S8e0M0_ivZJj-_YeLWOtRn9ygYhiAFhZkIRTJXXbw",
+          "Jackett=CfDJ8Ca0Ynmp3Y1Mk12QUuor5cx7T0J3deSeOskC9s5D-FS3s4UJZ4fkaQxBBaF4izkw3SeFR5cJN0J4HE-vC-41JzmraHhtn6AeS9YcL0J_PDIGjmOZwf_wMnZMlx7PfaodpJD9o1JYD5Ufcm32HtLoFFV3FO8WqpsyYUgmg50ZUlsPBX0fTiHXXWSSbJecZLjunu1RSaRZzEyuIWe_PPB15XoWXQCeXZwCYoQ0UY8Zy37sOR3457QXYSl1ULd0T070ap06kpzKDjOgiWuRq_1gvn-tp2wBlCvuVf7xshhA4Xbpgx4FWKx34ShY4y5GLnu0xRDPqvfg8iZMM0N6Esonrqg",
       },
       referrerPolicy: "no-referrer",
       method: "GET",
@@ -268,7 +268,7 @@ const fetchTorrentFromHost1 = async (query) => {
 
   const fetchTorrentFromHost2 = async (query) => {
   const { hostUrl, apiKey } = host2;
-  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=2030&Category%5B%5D=2040&Category%5B%5D=2045&Category%5B%5D=2070&Category%5B%5D=5000&Category%5B%5D=5030&Category%5B%5D=5040&Category%5B%5D=8000&Category%5B%5D=8010&Tracker%5B%5D=mejortorrent`;
+  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=2070&Category%5B%5D=5000&Category%5B%5D=5030&Category%5B%5D=5040&Tracker%5B%5D=mejortorrent`;
 
   try {
     const response = await fetch(url, {
