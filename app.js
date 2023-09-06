@@ -212,13 +212,13 @@ let stream_results = [];
 let torrent_results = [];
 
 const host1 = {
-  hostUrl: "http://198.244.178.163:9117",
-  apiKey: "21ctcfyphhtsbvrbnkwjod3u2khw0s5b",
+  hostUrl: "http://81.156.223.238:9117",
+  apiKey: "ozh0zenhc5t9w5hzxkig5uejar4qhdp3",
 };
 
 const host2 = {
-  hostUrl: "http://100.12.26.164:9117",
-  apiKey: "b3f8f3fb4rtt4vcsml7cz82dtkjbj3df",
+  hostUrl: "http://81.150.31.153:9117",
+  apiKey: "1c99yaajym29qbrb715q3me1qwj2d42g",
 };
 
 const fetchTorrentFromHost1 = async (query) => {
