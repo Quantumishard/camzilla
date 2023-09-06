@@ -6,7 +6,7 @@ const torrentStream = require("torrent-stream");
 const bodyParser = require("body-parser");
 const pLimit = require('p-limit');
 const http = require("http");
-const limit = pLimit(5);
+const limit = pLimit(10);
 
 function getSize(size) {
   const gb = 1024 * 1024 * 1024;
@@ -36,7 +36,7 @@ const toStream = async (parsed, uri, tor, type, s, e) => {
 if (!parsed.files && uri.startsWith("magnet")) {
   try {
     const engine = torrentStream("magnet:" + uri, {
-      connections: 3, // Limit the number of connections/streams
+      connections: 5, // Limit the number of connections/streams
     });
 
     const res = await new Promise((resolve, reject) => {
@@ -46,7 +46,7 @@ if (!parsed.files && uri.startsWith("magnet")) {
 
       setTimeout(() => {
         resolve([]);
-      }, 5000); // Timeout if the server is too slow
+      }, 3000); // Timeout if the server is too slow
     });
 
     parsed.files = res;
@@ -330,7 +330,7 @@ app.get("/manifest.json", (req, res) => {
     id: "hy.torr.org",
     version: "1.0.1",
     name: "HYJackett",
-    description: "Torrents de películas y TV de Help_Yourself",
+    description: "Mixed torrents from Help_Yourself",
     logo: "https://raw.githubusercontent.com/mikmc55/hyackett/main/hyjackett.jpg",
     resources: ["stream"],
     types: ["movie", "series"],
