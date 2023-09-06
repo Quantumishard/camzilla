@@ -330,7 +330,7 @@ app.get("/manifest.json", (req, res) => {
     id: "hy.torr.org",
     version: "1.0.1",
     name: "HYJackett",
-    description: "Movie & TV Torrents from Jackett",
+    description: "Torrents de películas y TV de Help_Yourself",
     logo: "https://raw.githubusercontent.com/mikmc55/hyackett/main/hyjackett.jpg",
     resources: ["stream"],
     types: ["movie", "series"],
