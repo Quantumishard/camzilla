@@ -223,7 +223,7 @@ const host2 = {
 
 const fetchTorrentFromHost1 = async (query) => {
   const { hostUrl, apiKey } = host1;
-  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=2030&Category%5B%5D=2040&Category%5B%5D=2045&Category%5B%5D=2070&Category%5B%5D=5000&Category%5B%5D=5030&Category%5B%5D=5040&Category%5B%5D=8000&Category%5B%5D=8010&Tracker%5B%5D=cinecalidad&Tracker%5B%5D=divxtotal`;
+  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=2030&Category%5B%5D=2040&Category%5B%5D=2045&Category%5B%5D=2070&Category%5B%5D=5000&Category%5B%5D=5030&Category%5B%5D=5040&Category%5B%5D=8000&Category%5B%5D=8010&Tracker%5B%5D=divxtotal`;
 
   try {
     const response = await fetch(url, {
@@ -268,7 +268,7 @@ const fetchTorrentFromHost1 = async (query) => {
 
   const fetchTorrentFromHost2 = async (query) => {
   const { hostUrl, apiKey } = host2;
-  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=2030&Category%5B%5D=2040&Category%5B%5D=2045&Category%5B%5D=2070&Category%5B%5D=5000&Category%5B%5D=5030&Category%5B%5D=5040&Category%5B%5D=8000&Category%5B%5D=8010&Tracker%5B%5D=mejortorrent&Tracker%5B%5D=moviesdvdr`;
+  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=2030&Category%5B%5D=2040&Category%5B%5D=2045&Category%5B%5D=2070&Category%5B%5D=5000&Category%5B%5D=5030&Category%5B%5D=5040&Category%5B%5D=8000&Category%5B%5D=8010&Tracker%5B%5D=mejortorrent`;
 
   try {
     const response = await fetch(url, {
