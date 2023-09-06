@@ -223,7 +223,7 @@ const host2 = {
 
 const fetchTorrentFromHost1 = async (query) => {
   const { hostUrl, apiKey } = host1;
-  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=2030&Category%5B%5D=2040&Category%5B%5D=2045&Category%5B%5D=2070&Category%5B%5D=5000&Category%5B%5D=5030&Tracker%5B%5D=cinecalidad&Tracker%5B%5D=divxtotal`;
+  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category[]=2000&Category[]=5000&Category[]=8000&Category[]=10001&Category[]=10002&Category[]=10003&Tracker[]=filelisting&Tracker[]=bitsearch`;
 
   try {
     const response = await fetch(url, {
@@ -232,7 +232,7 @@ const fetchTorrentFromHost1 = async (query) => {
         "accept-language": "en-US,en;q=0.9",
         "x-requested-with": "XMLHttpRequest",
         cookie:
-          "Jackett=CfDJ8Ca0Ynmp3Y1Mk12QUuor5cx7T0J3deSeOskC9s5D-FS3s4UJZ4fkaQxBBaF4izkw3SeFR5cJN0J4HE-vC-41JzmraHhtn6AeS9YcL0J_PDIGjmOZwf_wMnZMlx7PfaodpJD9o1JYD5Ufcm32HtLoFFV3FO8WqpsyYUgmg50ZUlsPBX0fTiHXXWSSbJecZLjunu1RSaRZzEyuIWe_PPB15XoWXQCeXZwCYoQ0UY8Zy37sOR3457QXYSl1ULd0T070ap06kpzKDjOgiWuRq_1gvn-tp2wBlCvuVf7xshhA4Xbpgx4FWKx34ShY4y5GLnu0xRDPqvfg8iZMM0N6Esonrqg",
+          "Jackett=CfDJ8JGMKzAOIg1GpbGxjar2TujvQ1tVmIta0XThcBG4V_j32mQnx6z3GDTiqYsDLv0jLvfan6JOfx_Mr61hId8KLu389GzmDM6RDqq6yN7K3-ucA7FSricYvgWGmNnVq5xL7cdQfNVIvv78fhRG0Z7lw_Yjz47ZPY9ChVi2ppvE9NFr8dMUg_-fto8XEFEy29ZI6bsxX4KWYoEP-S_zUhhymLf54VJSQKCAvo7d0ZLzWh9p_08kEGaGxyTA8tZYhbolyjKEBoGno80BawzJq2jog8ThKhmtN45rAQdb1CrOkT9dl0S8e0M0_ivZJj-_YeLWOtRn9ygYhiAFhZkIRTJXXbw",
       },
       referrerPolicy: "no-referrer",
       method: "GET",
@@ -268,7 +268,7 @@ const fetchTorrentFromHost1 = async (query) => {
 
   const fetchTorrentFromHost2 = async (query) => {
   const { hostUrl, apiKey } = host2;
-  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category[]=2000&Category[]=2040&Category[]=2045&Category[]=2080&Category[]=5000&Category[]=5040&Category[]=5045&Category[]=5080&Category[]=8000&Category[]=100001&Category[]=100002&Category[]=100003&Tracker%5B%5D=knaben`;
+  const url = `${hostUrl}/api/v2.0/indexers/all/results?apikey=${apiKey}&Query=${query}&Category%5B%5D=2000&Category%5B%5D=2010&Category%5B%5D=2020&Category%5B%5D=2030&Category%5B%5D=2040&Category%5B%5D=2045&Category%5B%5D=2070&Category%5B%5D=5000&Category%5B%5D=5020&Category%5B%5D=5030&Category%5B%5D=5040&Category%5B%5D=5045&Category%5B%5D=5050&Category%5B%5D=5060&Category%5B%5D=5070&Category%5B%5D=5080&Category%5B%5D=2100000&Category%5B%5D=2101000&Category%5B%5D=2102000&Category%5B%5D=2103000&Category%5B%5D=2104000&Category%5B%5D=2105000&Category%5B%5D=2107000&Category%5B%5D=2108000&Category%5B%5D=3100000&Category%5B%5D=3101000&Category%5B%5D=3102000&Category%5B%5D=3103000&Category%5B%5D=3104000&Category%5B%5D=3105000&Category%5B%5D=3108000&Tracker%5B%5D=knaben`;
 
   try {
     const response = await fetch(url, {
